@@ -27,7 +27,6 @@ public class RobotEventController {
     public void receiveEvent(HttpServletRequest request, @RequestBody EventInfo eventInfo) throws IOException, APINoHandleException {
         //如果是消息
         if (eventInfo.getPost_type().equals("message")){
-            System.out.println(eventInfo);
             //如果是私人消息
             if(eventInfo.getMessage_type().equals("private")){
                 friendListener.addListen(eventInfo);

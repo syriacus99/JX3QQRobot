@@ -19,4 +19,13 @@ public interface GroupMessageService {
 
     //奇遇查询接口
     public void handleMeetingPre(EventInfo eventInfo) throws APINoHandleException;
+
+    //奇遇后续接口
+    public void handleMeetingStrategy(EventInfo eventInfo) throws APINoHandleException;
+
+    //维护公告接口
+    public void  handleAnnounce(EventInfo eventInfo) throws APINoHandleException;
+
+    // 开服状态查询
+    public void handleGameServiceStatusCheck(EventInfo eventInfo) throws APINoHandleException;
 }

@@ -9,9 +9,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class Jx3RobotApplication {
 
     public static void main(String[] args) {
-        String a = "a ";
-        String[] split = a.split(" ");
-        System.out.println(split.length);
         SpringApplication.run(Jx3RobotApplication.class, args);
     }
 

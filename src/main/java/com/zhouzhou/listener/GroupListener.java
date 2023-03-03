@@ -28,24 +28,41 @@ public class GroupListener {
     public void addListen(EventInfo eventInfo) throws APINoHandleException {
         String message = eventInfo.getMessage();
         String[] splitMsg = message.split(" ");
-        System.out.println(splitMsg);
         if(splitMsg[0].equals("日常") && splitMsg.length==1){
+            System.out.println(eventInfo);
             groupMessageService.handDailyTask(eventInfo,globalVariable.getServer());
         }
         else if(splitMsg[0].equals("日常") && splitMsg.length>1){
+            System.out.println(eventInfo);
             groupMessageService.handDailyTask(eventInfo,splitMsg[1]);
         }
         else if(splitMsg[0].equals("物价")){
+            System.out.println(eventInfo);
             groupMessageService.handleAppearance(eventInfo);
         }
         else if(splitMsg[0].equals("金价") && splitMsg.length==1){
+            System.out.println(eventInfo);
             groupMessageService.handleGoldPrice(eventInfo,globalVariable.getServer());
         }
         else if(splitMsg[0].equals("金价") && splitMsg.length>1){
+            System.out.println(eventInfo);
             groupMessageService.handleGoldPrice(eventInfo,splitMsg[1]);
         }
         else if(splitMsg[0].equals("前置") || splitMsg[0].equals("奇遇前置")){
+            System.out.println(eventInfo);
             groupMessageService.handleMeetingPre(eventInfo);
+        }
+        else if(splitMsg[0].equals("后续") || splitMsg[0].equals("奇遇后续")){
+            System.out.println(eventInfo);
+            groupMessageService.handleMeetingStrategy(eventInfo);
+        }
+        else if(splitMsg[0].equals("公告")){
+            System.out.println(eventInfo);
+            groupMessageService.handleAnnounce(eventInfo);
+        }
+        else if(splitMsg[0].equals("开服")){
+            System.out.println(eventInfo);
+            groupMessageService.handleGameServiceStatusCheck(eventInfo);
         }
 
     }

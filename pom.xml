@@ -45,12 +45,18 @@
             <version>3.1.5</version>
         </dependency>
 
-
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.60</version>
         </dependency>
+       <!-- web sockey-->
+        <dependency>
+        <groupId>org.java-websocket</groupId>
+        <artifactId>Java-WebSocket</artifactId>
+        <version>1.4.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

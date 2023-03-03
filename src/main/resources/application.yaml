@@ -1,2 +1,4 @@
 server:
   port: 8001
+JX3API:
+  socket: wss://socket.nicemoe.cn
